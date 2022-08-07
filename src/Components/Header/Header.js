@@ -10,7 +10,7 @@ import {
 
 import cardLogo from "../../images/card-logo.svg";
 
-const Header = () => {
+const Header = (props) => {
   return (
     <HeaderWrap>
       <BackCard>
