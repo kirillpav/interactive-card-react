@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-import bgImage from "../../images/bg-main-mobile.png";
+import bgImageDesktop from "../../images/bg-main-desktop.png";
+import bgImageMobile from "../../images/bg-main-mobile.png";
 import backImage from "../../images/bg-card-back.png";
 import frontImage from "../../images/bg-card-front.png";
 
@@ -13,6 +14,14 @@ export const HeaderWrap = styled.div`
 
   height: 240px;
 
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 0;
+    margin-right: 349px;
+
+    height: 100vh;
+    width: 483px;
+  }
+
   &:after {
     position: absolute;
 
@@ -21,13 +30,19 @@ export const HeaderWrap = styled.div`
 
     content: "";
     display: block;
-    background-image: url(${bgImage});
+    background-image: url(${bgImageMobile});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
     width: 100%;
     height: 240px;
+
+    @media screen and (min-width: 1440px) {
+      background-image: url(${bgImageDesktop});
+
+      height: 100vh;
+    }
   }
 `;
 
@@ -45,6 +60,17 @@ export const BackCard = styled.div`
 
   z-index: 1;
 
+  @media screen and (min-width: 1440px) {
+    top: unset;
+    right: unset;
+
+    bottom: 186px;
+    left: 258px;
+
+    width: 447px;
+    height: 245px;
+  }
+
   p {
     position: absolute;
     top: 72px;
@@ -61,6 +87,14 @@ export const BackCard = styled.div`
     /* White */
 
     color: #ffffff;
+
+    @media screen and (min-width: 1440px) {
+      top: 115px;
+      right: 57px;
+
+      font-size: 14px;
+      letter-spacing: 2px;
+    }
   }
 `;
 
@@ -80,6 +114,14 @@ export const FrontCard = styled.div`
 
   z-index: 2;
 
+  @media screen and (min-width: 1440px) {
+    top: 186px;
+    left: 164px;
+
+    width: 447px;
+    height: 245px;
+  }
+
   img {
     position: absolute;
     top: 17px;
@@ -87,6 +129,14 @@ export const FrontCard = styled.div`
 
     width: 54px;
     height: 30px;
+
+    @media screen and (min-width: 1440px) {
+      top: 28px;
+      left: 32px;
+
+      width: 84px;
+      height: 47px;
+    }
   }
 `;
 
@@ -105,6 +155,17 @@ export const CreditCardNum = styled.p`
   /* White */
 
   color: #ffffff;
+
+  @media screen and (min-width: 1440px) {
+    top: unset;
+    left: 32px;
+    bottom: 70px;
+
+    font-size: 28px;
+    line-height: 36px;
+
+    letter-spacing: 3.4px;
+  }
 `;
 
 export const CreditCardName = styled.p`
@@ -121,6 +182,15 @@ export const CreditCardName = styled.p`
   /* White */
 
   color: #ffffff;
+
+  @media screen and (min-width: 1440px) {
+    bottom: 26.5px;
+    left: 32px;
+
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
 `;
 
 export const CreditCardDate = styled.p`
@@ -138,4 +208,13 @@ export const CreditCardDate = styled.p`
   /* White */
 
   color: #ffffff;
+
+  @media screen and (min-width: 1440px) {
+    bottom: 26.5px;
+    right: 32px;
+
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
 `;
