@@ -9,6 +9,7 @@ import {
   StyledLabel,
 } from "./Form.styled";
 
+// child component
 const Form = () => {
   const initialValues = {
     name: "",
@@ -22,7 +23,6 @@ const Form = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
-    console.log(formValues);
   };
 
   const handleSubmit = (e) => {

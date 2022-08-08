@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BackCard,
   CreditCardDate,
@@ -9,20 +9,26 @@ import {
 } from "./Header.styled";
 
 import cardLogo from "../../images/card-logo.svg";
+import DesktopLayout from "../../Styles/DesktopLayout";
+import Form from "../Form/Form";
 
-const Header = (props) => {
+// Parent Component
+const Header = () => {
   return (
-    <HeaderWrap>
-      <BackCard>
-        <p>000</p>
-      </BackCard>
-      <FrontCard>
-        <img src={cardLogo} alt="Card Logo" />
-        <CreditCardNum>0000 0000 0000 0000</CreditCardNum>
-        <CreditCardName>Jane Appleseed</CreditCardName>
-        <CreditCardDate>00/00</CreditCardDate>
-      </FrontCard>
-    </HeaderWrap>
+    <DesktopLayout>
+      <HeaderWrap>
+        <BackCard>
+          <p>000</p>
+        </BackCard>
+        <FrontCard>
+          <img src={cardLogo} alt="Card Logo" />
+          <CreditCardNum>0000 0000 0000 0000</CreditCardNum>
+          <CreditCardName>Jane Appleseed</CreditCardName>
+          <CreditCardDate>00/00</CreditCardDate>
+        </FrontCard>
+      </HeaderWrap>
+      <Form />
+    </DesktopLayout>
   );
 };
 

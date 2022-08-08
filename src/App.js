@@ -12,7 +12,7 @@ function App() {
       <Container>
         <DesktopLayout>
           <Header />
-          <Form />
+          {/* <Form /> */}
         </DesktopLayout>
       </Container>
     </>
